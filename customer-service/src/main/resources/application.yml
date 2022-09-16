@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/101digital_customer?relaxAutoCommit=true&useSSL=false
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platfrom: org.hibernate.dialect.PostgreSQL9Dialect
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.yml
+
+jwt:
+  secret: customer

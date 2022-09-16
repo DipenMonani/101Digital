@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/101digital_merchant?relaxAutoCommit=true&useSSL=false
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platfrom: org.hibernate.dialect.PostgreSQL9Dialect
+    show-sql: true
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.yml
+
+jwt:
+  secret: merchant
